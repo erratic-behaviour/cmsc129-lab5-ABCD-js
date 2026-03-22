@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>lab5-abcd</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
     </head>
     <body>
-        <button onclick="time_now()">Show Current Date</button>
-        <p><time id="currentDate"></time></p>
-        <p><time id="currentTime"></time></p>
 
-        <script src="lab5_scripts.js"></script>
-    </body>
+            <header>
+                <h2>Welcome to</h2>
+                <h1>ABCD CRS</h1>
+            </header>
+
+            <div id="show-date-time" class="container">
+                <button onclick="time_now()">Show Current Date</button>
+                <p><time id="currentDate"></time></p>
+                <p><time id="currentTime"></time></p>
+            </div>
+
+
+            <div id="form" class="container">
+                <form>
+                    <p class="form-text">Name</p>
+                    <input type="text">
+
+                    <p class="form-text">Age</p>
+                    <input type="number">
+
+                    <p class="form-text">Email</p>
+                    <input type="email">
+
+                    <p class="form-text">Course</p>
+                    <input type="checkbox">
+
+                    <input type="submit">
+                </form>
+            </div>
+
+            <script src="lab5_scripts.js"></script>
+        </body>
 </html>
