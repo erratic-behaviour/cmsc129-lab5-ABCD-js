@@ -23,3 +23,63 @@ const time_now = () => {
       minute: "2-digit",
     });
 };
+
+  const student = {
+    studentNumber: 2024 + Math.floor(Math.random() * 90000 + 10000),
+    name: "grwwrh", 
+    age: 19,
+    email: "gjsreipgej@gmailcom",
+    course: "BS Computer Repair Shop"
+}
+
+
+function addStudent(){
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
+  const email = document.getElementById("email").value;
+  const course = document.getElementById("course").value;
+  const studentNum = "2024" + Math.floor(Math.random() * 90000 + 10000);
+
+  if (validate(name, age, email)){
+    let newStudent = {
+      name: name,
+      studentNum: studentNum,
+      age: age,
+      email: email,
+      course: course
+  }
+
+    students.push(newStudent)
+  }
+
+
+}
+
+const students = []
+
+function validate(name, age, email){
+  if (name.length <= 5 || !name.includes(" ")){
+      console.log("Invalid name!");
+      return false;
+  }
+
+  if(age <= 18 || age > 99 || typeof(age) != "number"){
+    console.log("Invalid age!")
+    return false;
+
+  }
+
+  if(!email.endsWith("@up.edu.ph")){
+    console.log("Invalid email!")
+    return false;
+
+  }
+  return true
+
+}
+
+function findStudent(){
+  let queriedStudent = document.getElementById()
+}
+
+
