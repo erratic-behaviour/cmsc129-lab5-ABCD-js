@@ -35,8 +35,15 @@
                     <p class="form-text">Course</p>
                     <input type="checkbox" id="course">
 
-                    <input type="submit">
+                    <button type="button" onclick="addStudent()">Submit</button>
                 </form>
+                    <p class="form-text">Search Student (input student no.)</p>
+                    <input type="number" id="searchInput">
+                    <button onclick="findStudent()">Search</button>
+                    <div id="studentDisplay"></div>
+                    <div id="studentList"></div>
+                    <br>
+                    <button onclick="displayList()">Display All</button>
             </div>
 
             <script src="lab5_scripts.js"></script>

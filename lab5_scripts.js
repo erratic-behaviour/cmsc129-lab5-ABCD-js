@@ -24,14 +24,6 @@ const time_now = () => {
     });
 };
 
-  const student = {
-    studentNumber: 2024 + Math.floor(Math.random() * 90000 + 10000),
-    name: "grwwrh", 
-    age: 19,
-    email: "gjsreipgej@gmailcom",
-    course: "BS Computer Repair Shop"
-}
-
 
 function addStudent(){
   const name = document.getElementById("name").value;
@@ -40,7 +32,7 @@ function addStudent(){
   const course = document.getElementById("course").value;
   const studentNum = "2024" + Math.floor(Math.random() * 90000 + 10000);
 
-  if (validate(name, age, email)){
+  if (validate(name, Number(age), email)){
     let newStudent = {
       name: name,
       studentNum: studentNum,
@@ -78,8 +70,27 @@ function validate(name, age, email){
 
 }
 
+
 function findStudent(){
-  let queriedStudent = document.getElementById()
+  let queriedStudent = document.getElementById("searchInput").value;
+  const found = students.find(n => n.studentNum === queriedStudent);
+  displayStudent = document.getElementById("displayStudent");
+
+  if(found){
+    displayStudent.innerHTML = `Student found! <br> ${found.name} <br> ${found.age}<br>${found.email} <br> ${found.studentNum} <br> ${found.course}`;
+
+  } else {
+    displayStudent.textContent = "student does not exist!";
+    
+  }
+
+}
+
+function displayList(){
+  studentList = document.getElementById("studentList")
+  for (i = 0; i < students.length; i++){
+    studentList.innerHTML += `${students[i].name}, ${students[i].age}, ${students[i].email}, ${students[i].studentNum}, ${students[i].course}<br>`;
+  }
 }
 
 
