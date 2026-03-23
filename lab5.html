@@ -15,47 +15,64 @@
             </header>
 
             <div id="show-date-time" class="container">
-                <h2>Date Checker</h2>
+                <p class="text">Click the button to display today's current date and time.</p>
                 <button onclick="time_now()">Show Current Date</button>
                 <p><time id="currentDate"></time></p>
                 <p><time id="currentTime"></time></p>
             </div>
 
-
             <!-- FORM for Student Data -->
             <div id="form" class="container">
-                <h2>Personal Data Input</h2>
+                <div class="form-instructions">
+                    <p class="maintext">Please fill in the details properly and accurately. </p>
+                    <p class = "subtext">Furthermore, do note that to properly register your information, you have to use an
+                        email belonging to the <strong>@up.edu.ph</strong> domain.
+                    </p>
+                </div>
+
                 <form>
-                    <p class="form-text">Name</p>
+                    <p class="form-text">Name:</p>
                     <input type="text" id="name" placeholder="Enter your name here">
 
-                    <p class="form-text">Age</p>
+                    <p class="form-text">Age:</p>
                     <input type="number" id="age" placeholder="Enter your age here">
 
-                    <p class="form-text">Email</p>
+                    <p class="form-text">Email:</p>
                     <input type="email" id="email" placeholder="Enter your email here">
 
-                    <p class="form-text">Course</p>
-                    <input type="checkbox" id="course">
-
+                    <p class="form-text">Course:</p>
+                    
+                    <select name="courses" id = "courses">
+                        <option value="" disabled selected>Select your course</option>
+                        <option value = "BA Food Appreciation">BA Food Appreciation</option>
+                        <option value = "BA Applied Poetry of the Future">BA Applied Poetry of the Future</option>
+                        <option value = "BS Computer Repair Shop">BS Computer Repair Shop</option>
+                        <option value = "BS Video Gaming">BS Video Gaming</option>
+                        <option value = "BS Installing and Downloading">BS Installing and Downloading</option>
+                    </select>
+                        
                     <button type="button" onclick="addStudent()">Submit</button>
                 </form>
             </div>
             
             <!-- SEARCH students -->
             <div id="search-student" class="container">
-                <h2>Search Student</h2>
-                <p class="form-text">Search Student (input student no.)</p>
+                <p class="text">Input <strong>student number</strong> to search in the directory.</p>
                 <input type="number" id="searchInput">
 
                 <button onclick="findStudent()">Search</button>
                 
                 <div id="studentDisplay"></div>
-                <div id="studentList"></div>
-
-                <button onclick="displayList()">Display All</button>
             </div>
 
+            <!-- DISPLAY students -->
+            <div id = "display-student" class="container">
+                <p class="text">Click the button to display the list of students in the directory.</p>
+                <button onclick="displayList()">Display All</button>
+
+                <div id="studentList"></div>
+            </div>
+            
             <script src="lab5_scripts.js"></script>
         </body>
 </html>

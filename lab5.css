@@ -1,92 +1,185 @@
-/* IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
 
-
-html, body {
-    background-color: #EAE2B7;
-    margin: 0;
+/* default */
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 
 body {
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 50px;
+  background: #FAF3EB;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  padding: 32px;
 }
 
-/* TYPOGRAPHY */
-h1, h2, p {
-    color: #EAE2B7;
+/* puts each section in a square */
+.container,
+#display-student {
+  border: 1.5px solid #01092E;
+  padding: 30px;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 29px /*spacing per container */
 }
 
-h1, h2, h3 {
-    font-family: "Noto Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
+/* header */
+header {
+  text-align: center;
+  margin-bottom: 29px;
 }
 
-p {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-header h1, header h2 {
-    color: #003049;
+header h2 {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 #main-title {
-    font-size: 4em;
-
-    border-top: solid 3px;
-    border-bottom: solid 3px;
+  font-size: 34px;
+  font-weight: 500;
+  color: #01092E;
+  font-family : 'Konkhmer Sleokchher', cursive;
 }
 
-
-.container {
-    background-color: #003049;
-    padding: 50px;
-
-    width: 90%;
-
-    margin-left: 10px;
-    margin-right: 10px;
-
-    border-radius: 20px;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    box-shadow: 0px 0px 10px 10px #c1c1c1;
+/* date card */
+#show-date-time {
+  background: #0B1956;
+  color: #FAF3EB;
+  text-align: center;
+  min-height: 150px;
+  justify-content: center;
 }
 
-#form, #search-student {
-    padding-top: 20px;
+/* form card */
+#form {
+  background: #E5D8C7;
+  color: #0B1956;
+  display: flex; /* make elements be side by side */
+  justify-content: space-between; 
+  gap: 40px;
+  align-items: center;
 }
 
-
-button, input[type="submit"] {
-    font-family: "Work Sans", sans-serif;
-    font-weight: 600;
-
-    color: #EAE2B7;
-    background-color: #628B48;
-
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
+#form {
+  background: #E5D8C7;
+  color: #0B1956;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
 }
 
-button, input[type="submit"]:hover {
-    cursor: pointer;
+.form-text {
+  font-size: 15px;
+}
+
+.form-instructions {
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.maintext {
+  line-height: 1.4;
+  max-width: 260px;
+}
+
+.subtext {
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 320px;
+}
+
+#form form {
+  width: 48%;
+  background: #FAF3EB;
+  border-radius: 10px;
+  border: 1px solid #0B1956;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 240px;
+  justify-content: flex-end;
+}
+
+/* search card */
+#search-student {
+  background: #01092E;
+  color: #FAF3EB;
+  text-align: center;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#search-student button {
+    margin-top: 16px;
+    background: #FAF3EB;
+    color: #0B1956;
+}
+
+/* display all card */
+#display-student {
+  background: #FEF0E5;
+  color: #0B1956; 
+  text-align: center;
+  min-height: 150px;
+}
+
+/* repeated text blocks */
+.text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+/* inputs */
+input,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #6f78a8;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  background: #f7f7f7;
+}
+
+/* buttons */
+button {
+  align-self: center;
+  background: #0B1956;
+  border: 1px solid #0B1956;
+  color: #FAF3EB;
+  border-radius: 20px;
+  padding: 10px 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#show-date-time button {
+  background: #FAF3EB;
+  color: #0B1956;
+  border: 1px solid #01092E;
+  margin-bottom: 16px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* output text */
+#studentDisplay,
+#studentList,
+#currentDate,
+#currentTime {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 1.5;
 }

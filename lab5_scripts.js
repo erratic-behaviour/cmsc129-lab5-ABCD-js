@@ -14,81 +14,86 @@ const time_now = () => {
     ", " +
     today.toLocaleDateString("en-US", {
       weekday: "long",
-    });
+    }) + ".";
 
   timeElement.textContent =
     "The current time is " +
     today.toLocaleTimeString("en-us", {
       hour: "2-digit",
       minute: "2-digit",
-    });
+    }) + ".";
 };
 
 
 function addStudent(){
   const name = document.getElementById("name").value;
-  const age = document.getElementById("age").value;
+  const age = Number(document.getElementById("age").value);
   const email = document.getElementById("email").value;
-  const course = document.getElementById("course").value;
+  const course = document.getElementById("courses").value;
   const studentNum = "2024" + Math.floor(Math.random() * 90000 + 10000);
 
-  if (validate(name, Number(age), email)){
+  if (validate(name, age, email)){
     let newStudent = {
       name: name,
       studentNum: studentNum,
       age: age,
       email: email,
       course: course
+  };
+
+    students.push(newStudent);
+    alert("Student added successfully!");
+    
+    document.getElementById("name").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("courses").selectedIndex = 0;
   }
-
-    students.push(newStudent)
-  }
-
-
 }
 
-const students = []
+const students = [];
 
 function validate(name, age, email){
   if (name.length <= 5 || !name.includes(" ")){
-      console.log("Invalid name!");
+      alert("Invalid name!");
       return false;
   }
 
   if(age <= 18 || age > 99 || typeof(age) != "number"){
-    console.log("Invalid age!")
+    alert("Invalid age!")
     return false;
 
   }
 
   if(!email.endsWith("@up.edu.ph")){
-    console.log("Invalid email!")
+    alert("Invalid email!")
     return false;
 
   }
-  return true
-
+  return true;
 }
 
 
 function findStudent(){
-  let queriedStudent = document.getElementById("searchInput").value;
+  const queriedStudent = document.getElementById("searchInput").value;
   const found = students.find(n => n.studentNum === queriedStudent);
-  displayStudent = document.getElementById("displayStudent");
+  const displayStudent = document.getElementById("studentDisplay");
 
   if(found){
     displayStudent.innerHTML = `Student found! <br> ${found.name} <br> ${found.age}<br>${found.email} <br> ${found.studentNum} <br> ${found.course}`;
 
   } else {
-    displayStudent.textContent = "student does not exist!";
+    displayStudent.textContent = "Student record does not exist!";
     
   }
 
 }
 
 function displayList(){
-  studentList = document.getElementById("studentList")
-  for (i = 0; i < students.length; i++){
+  const studentList = document.getElementById("studentList");
+  studentList.innerHTML = ""; //clears it first
+
+  for (let i = 0; i < students.length; i++){
     studentList.innerHTML += `${students[i].name}, ${students[i].age}, ${students[i].email}, ${students[i].studentNum}, ${students[i].course}<br>`;
   }
 }
