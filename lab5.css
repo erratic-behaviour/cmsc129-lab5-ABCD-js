@@ -62,15 +62,6 @@ header h2 {
   align-items: center;
 }
 
-#form {
-  background: #E5D8C7;
-  color: #0B1956;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: center;
-}
-
 .form-text {
   font-size: 15px;
 }
