@@ -49,7 +49,6 @@ header h2 {
   color: #FAF3EB;
   text-align: center;
   min-height: 150px;
-  justify-content: center;
 }
 
 /* form card */
@@ -71,7 +70,6 @@ header h2 {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: flex-start;
 }
 
 .maintext {
