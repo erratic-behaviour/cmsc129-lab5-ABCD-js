@@ -6,16 +6,23 @@
         <link rel="stylesheet" href="lab5.css">
         
         <title>ABCD CRS</title>
+        <link rel="icon" type="image/x-icon" href="logo.ico">
     </head>
     <body>
 
             <header>
-                <h2>Welcome to</h2>
-                <h1 id="main-title">ABCD Mini CRS</h1>
+                <img id="logo" src="logo.png"></img>
+                <div>
+                    <h2>Welcome to</h2>
+                    <h1 id="main-title">ABCD Mini CRS</h1>
+                </div>
             </header>
 
             <div id="show-date-time" class="container">
-                <p class="text">Click the button to display today's current date and time.</p>
+                <p class="text">
+                    Click the button to display today's 
+                    current date and time.
+                </p>
                 <button onclick="time_now()">Show Current Date</button>
                 <p><time id="currentDate"></time></p>
                 <p><time id="currentTime"></time></p>
@@ -24,8 +31,11 @@
             <!-- FORM for Student Data -->
             <div id="form" class="container">
                 <div class="form-instructions">
-                    <p class="maintext">Please fill in the details properly and accurately. </p>
-                    <p class = "subtext">Furthermore, do note that to properly register your information, you have to use an
+                    <p class="maintext">
+                        Please fill in the details properly and accurately. 
+                    </p>
+                    <p class = "subtext">Furthermore, do note that to properly register 
+                        your information, you have to use an
                         email belonging to the <strong>@up.edu.ph</strong> domain.
                     </p>
                 </div>
@@ -51,26 +61,46 @@
                         <option value = "BS Installing and Downloading">BS Installing and Downloading</option>
                     </select>
                         
-                    <button type="button" onclick="addStudent()">Submit</button>
+                    <button type="button" onclick="add_student()">Submit</button>
                 </form>
             </div>
             
             <!-- SEARCH students -->
             <div id="search-student" class="container">
-                <p class="text">Input <strong>student number</strong> to search in the directory.</p>
+                <p class="text">
+                    Input <strong>student number</strong>
+                     to search in the directory.
+                </p>
                 <input type="number" id="searchInput">
 
-                <button onclick="findStudent()">Search</button>
+                <button onclick="find_student()">Search</button>
                 
                 <div id="studentDisplay"></div>
             </div>
 
             <!-- DISPLAY students -->
             <div id = "display-student" class="container">
-                <p class="text">Click the button to display the list of students in the directory.</p>
-                <button onclick="displayList()">Display All</button>
+                <p class="text">
+                    Click the button to display the list of students 
+                    in the directory.
+                </p>
+                <button onclick="display_list()">Display All</button>
 
-                <div id="studentList"></div>
+                <p id="emptyDirectory" hidden="true">
+                    <br><strong>There are no registered students</strong>
+                </p>
+                <div id="studentList" hidden="true">
+                    <table>
+                        <thead>
+                            <th>Student Number</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Course</th>
+                        </thead>
+                        <tbody id="directoryBody">
+                        </tbody>
+                    </table>
+                </div>
             </div>
             
             <script src="lab5_scripts.js"></script>

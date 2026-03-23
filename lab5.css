@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap");
 
 /* default */
-* { 
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+#logo {
+  float: left;
+  height: 20vh;
+}
+
 body {
-  background: #FAF3EB;
-  font-family: 'Inter', sans-serif;
+  background: #faf3eb;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   padding: 32px;
 }
@@ -18,17 +23,21 @@ body {
 /* puts each section in a square */
 .container,
 #display-student {
-  border: 1.5px solid #01092E;
+  border: 1.5px solid #01092e;
   padding: 30px;
   width: 100%;
   max-width: 850px;
-  margin: 0 auto 29px /*spacing per container */
+  margin: 0 auto 29px; /*spacing per container */
 }
 
 /* header */
 header {
-  text-align: center;
-  margin-bottom: 29px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 header h2 {
@@ -39,24 +48,24 @@ header h2 {
 #main-title {
   font-size: 34px;
   font-weight: 500;
-  color: #01092E;
-  font-family : 'Konkhmer Sleokchher', cursive;
+  color: #01092e;
+  font-family: "Konkhmer Sleokchher", cursive;
 }
 
 /* date card */
 #show-date-time {
-  background: #0B1956;
-  color: #FAF3EB;
+  background: #0b1956;
+  color: #faf3eb;
   text-align: center;
   min-height: 150px;
 }
 
 /* form card */
 #form {
-  background: #E5D8C7;
-  color: #0B1956;
+  background: #e5d8c7;
+  color: #0b1956;
   display: flex; /* make elements be side by side */
-  justify-content: space-between; 
+  justify-content: space-between;
   gap: 40px;
   align-items: center;
 }
@@ -85,9 +94,9 @@ header h2 {
 
 #form form {
   width: 48%;
-  background: #FAF3EB;
+  background: #faf3eb;
   border-radius: 10px;
-  border: 1px solid #0B1956;
+  border: 1px solid #0b1956;
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
@@ -98,8 +107,8 @@ header h2 {
 
 /* search card */
 #search-student {
-  background: #01092E;
-  color: #FAF3EB;
+  background: #01092e;
+  color: #faf3eb;
   text-align: center;
   min-height: 230px;
   display: flex;
@@ -108,15 +117,15 @@ header h2 {
 }
 
 #search-student button {
-    margin-top: 16px;
-    background: #FAF3EB;
-    color: #0B1956;
+  margin-top: 16px;
+  background: #faf3eb;
+  color: #0b1956;
 }
 
 /* display all card */
 #display-student {
-  background: #FEF0E5;
-  color: #0B1956; 
+  background: #fef0e5;
+  color: #0b1956;
   text-align: center;
   min-height: 150px;
 }
@@ -143,9 +152,9 @@ select {
 /* buttons */
 button {
   align-self: center;
-  background: #0B1956;
-  border: 1px solid #0B1956;
-  color: #FAF3EB;
+  background: #0b1956;
+  border: 1px solid #0b1956;
+  color: #faf3eb;
   border-radius: 20px;
   padding: 10px 24px;
   font-size: 14px;
@@ -153,9 +162,9 @@ button {
 }
 
 #show-date-time button {
-  background: #FAF3EB;
-  color: #0B1956;
-  border: 1px solid #01092E;
+  background: #faf3eb;
+  color: #0b1956;
+  border: 1px solid #01092e;
   margin-bottom: 16px;
 }
 
@@ -172,3 +181,71 @@ button:hover {
   font-size: 18px;
   line-height: 1.5;
 }
+
+#studentDisplay table{
+  width: fit-content;
+  align-items: center;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+#studentDisplay table th {
+  border: 2px solid #ffffff;
+  color: #f1f0ed;
+  background-color: #081ca3;
+  width: 10vw;
+}
+
+#studentDisplay table td {
+  background-color: #e5d8c7;
+  color: #080514;
+  border-bottom: 2px solid #ffffff;
+  padding-right: 10px;
+  padding-left: 10px;
+  min-width: 25vw;
+}
+
+/* directory display */
+#studentList table {
+  width: 100%;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+#studentList table th:nth-child(even) {
+  border: 2px solid #ffffff;
+  color: #f1f0ed;
+  background-color: #00020f;
+}
+
+#studentList table th:nth-child(odd) {
+  border: 2px solid #ffffff;
+  color: #f1f0ed;
+  background-color: #10247c;
+}
+
+/* number */
+#studentList table th:nth-child(1) {
+  width: 20%;
+}
+
+/* name */
+#studentList table th:nth-child(2) {
+  width: 40%;
+}
+
+/* age */
+#studentList table th:nth-child(3) {
+  width: 10%;
+}
+
+/* course */
+#studentList table th:nth-child(4) {
+  width: 30%;
+}
+
+/* per row below thead */
+#studentList table tr {
+  border-bottom: 2px solid #00020f;
+}
+/* end directory display */
