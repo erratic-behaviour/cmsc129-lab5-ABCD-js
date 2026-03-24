@@ -11,6 +11,7 @@
     <body>
 
             <header>
+                <!-- LOGO & TITLE -->
                 <img id="logo" src="logo.png"></img>
                 <div>
                     <h2>Welcome to</h2>
@@ -18,6 +19,7 @@
                 </div>
             </header>
 
+            <!-- SHOW TIME container -->
             <div id="show-date-time" class="container">
                 <p class="text">
                     Click the button to display today's 
@@ -42,17 +44,17 @@
 
                 <form>
                     <p class="form-text">Name:</p>
-                    <input type="text" id="name" placeholder="Enter your name here">
+                    <input type="text" id="name" placeholder="Enter your name here" required>
 
                     <p class="form-text">Age:</p>
-                    <input type="number" id="age" placeholder="Enter your age here">
+                    <input type="number" id="age" placeholder="Enter your age here" required>
 
                     <p class="form-text">Email:</p>
-                    <input type="email" id="email" placeholder="Enter your email here">
+                    <input type="email" id="email" placeholder="Enter your email here" required>
 
                     <p class="form-text">Course:</p>
                     
-                    <select name="courses" id = "courses">
+                    <select name="courses" id = "courses" required>
                         <option value="" disabled selected>Select your course</option>
                         <option value = "BA Food Appreciation">BA Food Appreciation</option>
                         <option value = "BA Applied Poetry of the Future">BA Applied Poetry of the Future</option>

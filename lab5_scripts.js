@@ -66,10 +66,10 @@ const students = [];
 const takenIDs = [];
 
 function validate(name, age, email) {
-  const regex = /^[^\s]+\s[^\s]+\s[^\s]+$/;
-  const regex2 = /^[^\s]+\s[^\s]+\s[^\s]+$/;
+  const regex = /^[^\s]+\s[^\s]+\s[\s]$/;
+  const regex2 = /^[^\s]+\s[^\s]+\s[\s]$/;
 
-  if (!regex.test(name) || name.length <= 5 || !regex2.test(name)) {
+  if (name.length <= 5 || !regex2.test(name)) {
     alert("Invalid name!");
     return false;
   }
