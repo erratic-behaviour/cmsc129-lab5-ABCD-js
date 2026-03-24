@@ -150,7 +150,7 @@ select {
 }
 
 /* buttons */
-button {
+button, input[type=submit] {
   align-self: center;
   background: #0b1956;
   border: 1px solid #0b1956;
